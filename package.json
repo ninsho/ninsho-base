@@ -1,0 +1,46 @@
+{
+  "name": "ninsho-base",
+  "version": "0.0.4",
+  "description": "An aggregate module for interfaces and abstract objects used on ninsho.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"src/*.ts\"",
+    "prebuild": "rimraf dist",
+    "test": "jest --config ./jest.config.json --runInBand --coverage",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "command": "npx ts-node-dev --respawn src/bin/index.ts"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ninsho/ninsho-base/issues"
+  },
+  "homepage": "https://github.com/ninsho/ninsho-base/",
+  "dependencies": {
+    "nodemailer": "^6.9.2",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "^20.2.3",
+    "@types/nodemailer": "^6.4.7",
+    "@types/pg": "^8.10.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "eslint": "^7.8.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  },
+  "sideEffects": false
+}
