@@ -44,8 +44,6 @@ export abstract class IPool extends ModuleBase {
 
   abstract end(): Promise<void>
 
-  // abstract getPool<T>(): T
-
   abstract truncate(tableNameList: string[]): Promise<void>
 
   abstract beginWithClient(): Promise<IPoolClient>
