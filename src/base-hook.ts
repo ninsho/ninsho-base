@@ -40,10 +40,8 @@ export async function hookCall(
 
   const hs = _hooks.filter((h: { hookPoint: string; }) => h.hookPoint === hookPoint)
   for (const h of hs) {
-    // console.log('--- hook:', hookPoint)
     const res = await h.hook(lend, fillProps(accept))
     if (res.fail()) return res
-    // console.log('--- hook:', hookPoint)
   }
   return new Success(null)
 }
