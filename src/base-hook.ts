@@ -8,12 +8,18 @@ import {
   IPoolClient
 } from '.'
 
+/**
+ * Const assertions for specifying the points to apply the hook.
+ */
 export const HookPoint = [
   'beforePasswordCheck',
   'onTransactionLast'
 ] as const
 export type HookPointType = typeof HookPoint[number]
 
+/**
+ * Type of the set of properties to pass to the hook.
+ */
 export type HookAccept = {
   req: any,
   props?: Required<MemberInsert | (MemberInsert & SessionInsert)>,
