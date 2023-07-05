@@ -25,7 +25,6 @@ https://github.com/ninsho/ninsho-cli/tree/main/src/schema
 | i-results
 | i-secure
 | options
-|
 
 ## Development Warning
 
